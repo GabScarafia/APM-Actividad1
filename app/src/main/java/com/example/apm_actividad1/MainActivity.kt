@@ -13,6 +13,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var usernameBox: EditText;
     private lateinit var passwordBox: EditText;
     private lateinit var loginButton: Button;
+    private lateinit var registerButton: Button;
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,6 +22,7 @@ class MainActivity : AppCompatActivity() {
         usernameBox = findViewById(R.id.username)
         passwordBox = findViewById(R.id.password)
         loginButton = findViewById(R.id.loginButton)
+        registerButton = findViewById(R.id.registerButton)
 
         loginButton.setOnClickListener {
             val inputUsername = usernameBox.text.toString()
@@ -38,8 +40,10 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-       /* register_button.setOnClickListener {
-            // TODO: Implementar la lógica para registrar nuevos usuarios
-        }*/
+        registerButton.setOnClickListener {
+           //TODO: Implementar la lógica para registrar nuevos usuarios
+            val intent = Intent(this, Registro::class.java)
+            startActivity(intent)
+        }
     }
 }
