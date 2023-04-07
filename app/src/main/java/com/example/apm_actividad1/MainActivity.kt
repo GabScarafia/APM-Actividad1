@@ -1,11 +1,11 @@
 package com.example.apm_actividad1
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
-import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
     private val username = "Juan Torres";
@@ -29,6 +29,8 @@ class MainActivity : AppCompatActivity() {
             if (inputUsername == username && inputPassword == password) {
                 // Datos ingresados correctamente, mostrar la pantalla de bienvenida
                 // TODO: Implementar la lógica para mostrar la pantalla de bienvenida
+                val intent = Intent(this, Bienvenida::class.java)
+                startActivity(intent)
 
             } else {
                 // Datos ingresados incorrectos, mostrar mensaje de error
