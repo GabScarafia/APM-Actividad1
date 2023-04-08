@@ -58,22 +58,22 @@ class Registro: AppCompatActivity() {
         val confirmPassword = editConfirmPassword.text.toString()
         if (name.isEmpty())
         {
-            editName.error = "Name is required"
+            editName.error = "El nombre es obligatorio"
             return false
         }
         if (email.isEmpty())
         {
-            editEmail.error = "Email is required"
+            editEmail.error = "El mail es obligatorio"
             return false
         }
         if (password.length < 6)
         {
-            editPassword.error = "Password must be at least 6 characters"
+            editPassword.error = "La contraseña debe ser de al menos 6 caracteres"
             return false
         }
         if (password != confirmPassword)
         {
-            editConfirmPassword.error = "Passwords do not match"
+            editConfirmPassword.error = "Las contraseñas no coinciden"
             return false
         }
         return true
@@ -83,7 +83,7 @@ class Registro: AppCompatActivity() {
         val confirmPassword = editConfirmPassword.text.toString()
 
         if (confirmPassword.isNotEmpty() && password != confirmPassword) {
-            editConfirmPassword.error = "Passwords do not match"
+            editConfirmPassword.error = "Las contraseñas no coinciden"
         } else {
             editConfirmPassword.error = null
         }
