@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import com.google.android.material.textview.MaterialTextView
 
 class MainActivity : AppCompatActivity() {
     private val username = "Juan Torres";
@@ -14,6 +15,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var passwordBox: EditText;
     private lateinit var loginButton: Button;
     private lateinit var registerButton: Button;
+    private lateinit var error: MaterialTextView;
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,6 +25,7 @@ class MainActivity : AppCompatActivity() {
         passwordBox = findViewById(R.id.password)
         loginButton = findViewById(R.id.loginButton)
         registerButton = findViewById(R.id.registerButton)
+        error = findViewById(R.id.error)
 
         loginButton.setOnClickListener {
             val inputUsername = usernameBox.text.toString()
@@ -36,7 +39,7 @@ class MainActivity : AppCompatActivity() {
 
             } else {
                 // Datos ingresados incorrectos, mostrar mensaje de error
-                usernameBox.visibility = View.INVISIBLE
+                error.visibility = View.VISIBLE
             }
         }
 
