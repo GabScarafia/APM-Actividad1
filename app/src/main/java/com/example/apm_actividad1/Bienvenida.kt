@@ -54,18 +54,4 @@ class Bienvenida: AppCompatActivity() {
         }
     }
 
-    /*private fun toggleImageSize(imageView: ImageView, agrandar : Boolean ) {
-        val scaleFactor = if (agrandar) 1.5f else 0.5f
-        val normalScale = 1.0f
-        var scale = 1.0f
-        if(!imageView.isSelected)
-        {
-            scale = if (imageView.scaleX == normalScale) scaleFactor else normalScale
-        }
-        else scale = scaleFactor
-        imageView.animate().scaleX(scale).scaleY(scale).translationX(0f).translationY(0f).withEndAction()
-        {
-            imageView.isSelected = !imageView.isSelected
-        }
-    }*/
 }
