@@ -1,8 +1,11 @@
 package com.example.apm_actividad1
 
 import android.os.Bundle
+import android.text.Editable
 import android.view.View
+import android.widget.EditText
 import android.widget.ImageView
+import android.widget.Switch
 import androidx.appcompat.app.AppCompatActivity
 
 
@@ -11,12 +14,23 @@ class Bienvenida: AppCompatActivity() {
     private lateinit var imageAndroid: ImageView
     private lateinit var imageIos: ImageView
     private lateinit var bienvenidaLayout: View
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_bienvenida)
         imageAndroid = findViewById(R.id.imageAndroid)
         imageIos = findViewById(R.id.imageIos)
+        val switchOtra = findViewById<Switch>(R.id.switchOtra)
+        val editTextOtra = findViewById<EditText>(R.id.editTextOtra)
 
+        switchOtra.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) {
+                editTextOtra.visibility = View.VISIBLE
+            } else {
+                editTextOtra.visibility = View.INVISIBLE
+                editTextOtra.text = Editable.Factory.getInstance().newEditable("")
+            }
+        }
         imageAndroid.setOnClickListener {
             toggleImageSizeSUPERFUNNY(imageAndroid, imageIos)
         }
