@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bienvenidaLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -19,11 +20,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <TextView
         android:id="@+id/textView4"
         android:layout_width="316dp"
         android:layout_height="42dp"
-        android:layout_marginTop="192dp"
+        android:layout_marginTop="64dp"
         android:gravity="center"
         android:text="Elija su Sistema Operativo"
         android:textColor="@color/black"
@@ -34,11 +36,32 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:id="@+id/imageAndroid"
+        android:layout_width="159dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="88dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:srcCompat="@drawable/android" />
+
+    <ImageView
+        android:id="@+id/imageIos"
+        android:layout_width="159dp"
+        android:layout_height="120dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/imageAndroid"
+        app:layout_constraintTop_toTopOf="@+id/imageAndroid"
+        app:srcCompat="@drawable/aios" />
+
     <TextView
         android:id="@+id/textView5"
         android:layout_width="316dp"
         android:layout_height="42dp"
-        android:layout_marginTop="372dp"
+        android:layout_marginTop="280dp"
         android:gravity="center"
         android:text="Preferencias de la Carrera"
         android:textColor="@color/black"
@@ -49,70 +72,49 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="159dp"
-        android:layout_height="119dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="200dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:srcCompat="@drawable/android" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="159dp"
-        android:layout_height="120dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toTopOf="@+id/imageView2"
-        app:srcCompat="@drawable/aios" />
-
     <Switch
-        android:id="@+id/switch1"
-        android:layout_width="wrap_content"
+        android:id="@+id/switchDesarrollo"
+        android:layout_width="112dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="124dp"
-        android:layout_marginTop="72dp"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="24dp"
         android:text="Desarrollo"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <Switch
-        android:id="@+id/switch2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/switchRedes"
+        android:layout_width="112dp"
+        android:layout_height="25dp"
         android:layout_marginTop="12dp"
         android:text="Redes"
-        app:layout_constraintEnd_toEndOf="@+id/switch1"
-        app:layout_constraintTop_toBottomOf="@+id/switch1" />
+        app:layout_constraintEnd_toEndOf="@+id/switchDesarrollo"
+        app:layout_constraintTop_toBottomOf="@+id/switchDesarrollo" />
 
     <Switch
-        android:id="@+id/switch3"
-        android:layout_width="wrap_content"
+        android:id="@+id/switchSeguridad"
+        android:layout_width="112dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:text="Seguridad"
-        app:layout_constraintEnd_toEndOf="@+id/switch2"
-        app:layout_constraintTop_toBottomOf="@+id/switch2" />
+        app:layout_constraintEnd_toEndOf="@+id/switchRedes"
+        app:layout_constraintTop_toBottomOf="@+id/switchRedes" />
 
     <Switch
-        android:id="@+id/switch4"
-        android:layout_width="wrap_content"
+        android:id="@+id/switchHardware"
+        android:layout_width="112dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:text="Hardware"
-        app:layout_constraintEnd_toEndOf="@+id/switch3"
-        app:layout_constraintTop_toBottomOf="@+id/switch3" />
+        app:layout_constraintEnd_toEndOf="@+id/switchSeguridad"
+        app:layout_constraintTop_toBottomOf="@+id/switchSeguridad" />
 
     <Switch
-        android:id="@+id/switch5"
-        android:layout_width="wrap_content"
+        android:id="@+id/switchOtra"
+        android:layout_width="112dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:text="Otra"
-        app:layout_constraintEnd_toEndOf="@+id/switch4"
-        app:layout_constraintTop_toBottomOf="@+id/switch4" />
+        app:layout_constraintEnd_toEndOf="@+id/switchHardware"
+        app:layout_constraintTop_toBottomOf="@+id/switchHardware" />
 </androidx.constraintlayout.widget.ConstraintLayout>
